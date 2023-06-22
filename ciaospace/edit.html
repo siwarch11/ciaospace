@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<!-- Mirrored from themestarz.net/html/accommodo/sticky-footer.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Apr 2022 11:37:59 GMT -->
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ThemeStarz">
+
+    <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/fonts/elegant-fonts.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/zabuto_calendar.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <title>Ciao Space</title>
+<style>
+    .exempleserif {
+        font-family: "Lucida Console", Courier, monospace;
+}
+</style>
+</head>
+
+<body>
+<div class="page-wrapper">
+    <div id="page-header">
+        <header>
+            <div class="container">
+
+                <!--end secondary-nav-->
+            </div>
+            <!--end container-->
+            <hr>
+            <div class="container">
+                <div class="primary-nav">
+                    <div class="left">
+                        <a href="index.html" id="brand"><img src="Space (1).png" alt=""></a>
+                        <a class="nav-trigger" data-toggle="collapse" href="#primary-nav" aria-expanded="false" aria-controls="primary-nav"><i class="fa fa-navicon"></i></a>
+                    </div>
+                    <!--end left-->
+                    <div class="right" >
+                        <nav id="primary-nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="my-accommodations.html">Reservations</a></li>
+                                <li>
+                                    <a href="listing.html">Offers</a>
+                                   
+                                </li>
+                                <li class="active"><a href="edit.html">To guide you</a></li>
+                       
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                             <li><a href="#" class="has-child">My acount</a>
+                                    <ul class="child-nav">
+                                        
+                                        <li><a href="profile.html" id="usernameUser">Profile</a></li>
+                                        <li><a href="signin.html" onclick="logout()">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!--end nav-->
+                    </div>
+                    <!--end right-->
+                </div>
+                <!--end primary-nav-->
+            </div>
+            <!--end container-->
+        </header>
+        <!--end header-->
+    </div>
+    <!--end page-header-->
+
+    <div id="page-content">
+        <div class="container">
+            <ol class="breadcrumb">
+                
+            </ol>
+            
+            <!--end breadcrumb-->
+
+            <!--end main-content-->
+        </div>
+        <!--end container-->
+    </div>
+    <!--end page-content-->
+    <div id="page-content">
+        <div class="container">
+
+            <!--end breadcrumb-->
+            <div class="main-content">
+                <div class="exempleserif">
+
+                    <h1><a href="edit.html">To guide you through Every step</a></h1>
+                  
+                </div>
+                <!--end title-->
+
+                <!--end info-->
+                <div class="quick-navigation" data-fixed-after-touch="">
+                    <div class="wrapper">
+                        <ul>
+                            <li><a href="#main-information" class="scroll">Main Information</a></li>
+                            <li><a href="#facilities" class="scroll">Facilities</a></li>
+                            <li><a href="#Offers" class="scroll">Offers</a></li>
+                            <li><a href="#activities" class="scroll">activities</a></li>
+                           
+                        </ul>
+                        
+                </div>
+                <!--end quick-navigation-->
+                <form onsubmit="return false;" class="form-submit labels-uppercase" id="form-submit">
+                    <section id="main-information">
+                        <div class="row">
+                        <div class="title">
+                            <h2>Main Information</h2>
+                            <aside class="step">1</aside>
+                        </div>
+
+                                <!--end form-group-->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                            
+                                <label for="object-type">Destination</label>
+                                <select id="v1"  class="form-control ">
+                                    <option disabled selected>Select Destination</option>
+                                    
+                                        <option disabled selected>Select region</option>
+                                        <option value="beja">Béja</option>
+                                        <option value="benarous">Ben Arous</option>
+                                        <option value="bizerte">Bizerte</option>
+                                        <option value=" gabes"> Gabès</option>
+                                        <option value=" gafsa"> Gafsa</option>
+                                        <option value="jendouba">Jendouba</option>
+                                        <option value="kairouan">Kairouan</option>
+                                        <option value="zaghouan">Zaghouan</option>
+                                        <option value="Hergla"> Hergla</option>
+                                        <option value="sfax">sfax</option>
+                                        <option value="monastir">Monastir</option>
+                                        <option value="mehdia">Mehdia</option>
+                                        <option value="tozeur">Tozeur</option>
+                                        <option value="tunis">Tunis</option>
+                                        <option value="sousse">Sousse</option>
+                                        <option value="nabeul">Nabeul</option>
+                                
+                                </select>
+                             </div>
+                        
+                        <div class="col-md-4">
+                           
+                             <label for="address-map">Period</label>
+                             <input id="v2" type="number" class="form-control"  placeholder="your vacation period" >
+                           
+                           </div>
+                           <div class="col-md-4">
+                            <div class="form-group">
+                               <label class="label-on-input" for="form-check-in">Date</label>
+                                <input id="v3" type="date" class="form-control" id="form-check-in" name="nights" placeholder="Check In Date">
+                              </div>
+                                 </div>
+
+                    </div>
+                </div>          
+            <div class="row">
+                 
+                     
+                    <div class="col-md-4">
+                                                
+                        <label>Budget</label>
+                        <select id="v4" class="form-control ">
+                            <option disabled selected>Select Budget</option>
+                            <option value="">0DT - 100DT</option>
+                            <option value="">100DT - 200DT</option>
+                            <option value="">+200DT</option>
+                        </select>
+                    
+                    <!--end form-group-->
+                </div>
+                                        
+                    <div class="col-md-4">
+                        <label>Companion</label>
+                        
+                                                    <select id="v5" class="form-control ">
+                                                        <option disabled selected>Select your Companion</option>
+                                                        <option value="">Family</option>
+                                                        <option value="">Friends</option>
+                                                        <option value="">Children</option>
+                                                        <option value="">couple</option>
+                                                    </select>
+                        <!--end checkboxes-->
+                    </div>               
+                    
+  
+             </div><br>
+             <form onsubmit="return false;"  class="form-submit labels-uppercase" id="form-submit">
+                    <section id="facility">
+                        <div class="row">
+                                <div class="title">
+                                    <h2>Facilities</h2>
+                                    <aside class="step">2</aside>
+                                </div>
+                            </div>
+                                <div class="row">
+                                <div class="col-md-4">
+                                    <label for="object-type">Kitchen</label>
+                                    <select class="form-control" id="v6">
+                                        <option disabled selected>Select your favorite kitchen</option>
+                                        <option value="tunisian">Tunisian</option>
+                                    <option value="fastfood">Fast Food</option>
+                                    <option value="seafood">Sea Food</option>
+                                    <option value="sushi">Sushi</option>
+                                    <option value="healthy">Healthy</option>
+                                    <option value="barbecue">Barbecue</option>
+
+                             </select>
+                                </div>
+                                <!--end map-->
+                             
+                             </div><br>
+                             <div class="row">
+                        
+                                <!--end col-md-4-->
+                                <div class="col-md-4">
+                                    
+                                    <h3>General</h3>
+                                    <ul class="checkboxes inline half list-unstyled">
+                                        <li><label><input type="checkbox" id="24HourFrontDesk">24-Hour Front Desk </label></li>
+                                        <li><label><input type="checkbox" id="alcohol">Alcohol</label></li>
+                                        <li><label><input type="checkbox" id="Transport">Transport</label></li>
+                                        <li><label><input type="checkbox" id="Appliessecuritymeasures">Applies security measures</label></li>
+    
+                                    </ul></div>
+                                    <div class="col-md-4">
+                                    <h3>Position</h3>
+                                    <ul class="checkboxes inline half list-unstyled">
+                                        <li><label><input type="checkbox" id="Nearthebeach">Near the beach</label></li>
+                                        <li><label><input type="checkbox" id="Neartheforest">Near the forest</label></li>
+                                        <li><label><input type="checkbox" id="Atthetowncenter">At the town center</label></li>
+                                        <li><label><input type="checkbox" id="Isolated">Isolated</label></li>
+                                        
+                                    </ul>
+                                    
+                                    
+                                    <!--end checkboxes-->
+                                </div>
+                                <!--end col-md-4-->
+                                <div class="col-md-4">
+                                    
+                                    <h3>Additional</h3>
+                                    <ul class="checkboxes inline half list-unstyled">
+                                        <li><label><input type="checkbox" id="FreeParking">Free Parking </label></li>
+                                        <li><label><input type="checkbox" id="FreeWiFi">Free WiFi</label></li>
+                                        <li><label><input type="checkbox" id="Gym">Gym</label></li>
+                                        
+    
+                                    </ul>
+                                    
+                                    <!--end checkboxes-->
+                                </div>
+                                <!--end col-md-4-->
+                            </div>
+                        <!--end row-->
+                    </div>
+                    
+                    <section id="offers">
+                        <div class="row">
+                        <div class="title">
+                            <h2>Offers</h2>
+                            <aside class="step">3</aside>
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                                <label for="object-type">Category</label>
+                                <select class="form-control" id="v7">
+                                    <option disabled selected>Select  </option>
+                                    <option value="hotel">Hotel</option>
+                                        <option value="gesthouse">Gest House</option>
+                                        <option value="resort">Resort</option>
+                                        <option value="camping">Camping</option>
+                                        <option value="restaurant">Restaurant</option>
+                                        <option value="cinema">Cinema</option>
+                                        <option value="attractionpark">Attraction park</option>
+                                        <option value="event">Event</option>
+                                        <option value="shopcenter">Shop Center</option>
+                                        <option value="theatre">Theatre</option>
+                                        <option value="nightclub">Night Club</option>
+                                        <option value="other">other</option>
+                                </select>
+                    
+                        </div>
+                    </div>
+                    <div class="row">
+                            
+                        
+                        <div class="col-md-7">
+                            <h3>Special Offer? <i class="fa fa-question-circle tooltip-question" data-toggle="tooltip" data-placement="right" title="product, service, or programme that is offered at reduced prices or rates."></i></h3>
+                            <div class="form-group-inline vertical-align-middle">
+                                <div class="form-group">
+                                    <label class="no-margin"><input type="checkbox" id="v8">Special Offer</label>
+                                </div>
+                                <!--end form-group-->
+                                <div class="form-group width-20">
+                                    <input type="text" class="form-control" id="v9"  placeholder="20%">
+                                </div>
+                                <!--end form-group-->
+                                <div class="form-group">
+                                    
+                                    <input type="text" class="form-control date" id="v10" name="nights" placeholder="Check In Date">
+                                </div>
+                                <!--end form-group-->
+                            </div>
+                            
+                            <!--end form-group-inline-->
+                        </div>
+                       
+                         <!--col-md-5-->
+                    
+                    <!--end row-->
+                    
+                </div>   
+                        <br>
+                    
+                    <section id="activities">
+                        <div class="title">
+                            <h2>Activities</h2>
+                            <aside class="step">4</aside>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3>Cultural</h3>
+                                <ul class="checkboxes inline half list-unstyled">
+                                    <li><label><input type="checkbox" name="1">  Cinema</label></li>
+                                    <li><label><input type="checkbox" name="2">  Theatre</label></li>
+                                    <li><label><input type="checkbox" name="3">  Museum & Monuments</label></li>
+                                 </ul>
+                                <!--end checkboxes-->
+                            </div>
+                            <!--end col-md-4-->
+                            <div class="col-md-4">
+                                <h3>Entertainment</h3>
+                                <ul class="checkboxes inline half list-unstyled">
+                                    <li><label><input type="checkbox" name="1">  Amusment parck</label></li>
+                                    <li><label><input type="checkbox" name="2">  Events</label></li>
+                                    <li><label><input type="checkbox" name="3">  Game Room</label></li>
+                                </ul>
+                                <!--end checkboxes-->
+                            </div>
+                            <!--end col-md-4-->
+                            <div class="col-md-4">
+                                <h3>Advanture</h3>
+                                <ul class="checkboxes inline half list-unstyled">
+                                    <li><label><input type="checkbox" name="1">  Diving</label></li>
+                                    <li><label><input type="checkbox" name="2">  Parachute</label></li>
+                                    <li><label><input type="checkbox" name="3">  Hiking</label></li>
+                                 </ul>
+                                <!--end checkboxes-->
+                            </div>
+                            <!--end col-md-4-->
+                        </div>
+                        <!--end row-->
+                        <!--end row-->
+                    </section>
+
+                    <hr>
+                    <section>
+                        <div class="form-group center">
+                            <button onclick="rec();" type="submit" class="btn btn-primary btn-rounded btn-xlarge">Search</button>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="center"><a href="#" class="btn btn-framed btn-default btn-rounded">Preview</a></div>
+                    </section>
+
+                    <h1 id="res" style="color: orange ;" ></h1>
+                </form>
+                <!--end form-->
+            </div>
+            <!--end main-content-->
+        </div>
+        <!--end container-->
+    </div>
+
+    <footer id="page-footer">
+        
+        <!--end row-one-->
+        <div class="row-two clearfix">
+            <div class="container">
+                <div class="copyright pull-left">    <strong>Copyright &copy; 2022 <a target="" href="https://chaabengroup.com/">chaaben Technology Group</a>.</strong>
+                    All rights reserved.
+                 <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0
+                </div></div>
+                <div class="footer-nav pull-right">
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="listing.html">offers</a>
+                    <a href="my-accommodations.html">Reservations</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="myaccount.html">My Account</a>
+                </div>
+            </div>
+            <div class="bg-transfer"><img src="assets/img/footer.jpg" alt=""></div>
+        </div>
+        <!--end row-two-->
+    </footer>
+    <!--end page-footer-->
+</div>
+<!--end page-wrapper-->
+<a href="#page-header" class="to-top scroll" data-show-after-scroll="600"><i class="arrow_up"></i></a>
+
+<script type="text/javascript" src="assets/js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/icheck.min.js"></script>
+
+<script type="text/javascript" src="assets/js/maps.js"></script>
+<script type="text/javascript" src="assets/js/custom.js"></script>
+
+<!--[if lte IE 9]>
+<script src="assets/js/ie.js"></script>
+<![endif]-->
+
+<script>
+    var c =localStorage.getItem("idUser");
+     console.log(c);
+ 
+     // Post a user
+     var url3 = "http://192.168.37.220:3000/users/" + c ;
+     var xhr3 = new XMLHttpRequest();
+     xhr3.open("GET", url3, true);
+ 
+     xhr3.onload = function () {
+         var admins = JSON.parse(xhr3.responseText);
+         if (xhr3.readyState == 4 && xhr3.status == "200") {
+             document.getElementById("usernameUser").innerHTML =admins.fname +` `+admins.lname ;
+           
+         } else {
+ 
+             console.log("error");
+         }
+     }
+ 
+     xhr3.send(null);
+ </script>
+ <script>
+     function logout(){
+       var d = window.confirm("want to LogOut?");
+       if (d == true)
+       {
+         localStorage.removeItem("idUser");
+       }
+     }
+   </script>
+
+
+<script>
+
+function verif(){
+
+
+var res = 1 ;
+        v1 = document.getElementById("v1").value;
+        v2 = document.getElementById("v2").value;
+
+
+
+
+
+        if (v1 == ""){
+            alert("saisir value obligation");
+            res =  0;
+        }
+
+        if (v2 == ""){
+            alert(" saisir value obligation");
+            res =  0;
+        }
+
+
+        return res;
+
+
+}
+
+function rec(){
+
+
+        if ( verif() ){
+
+
+  var url = "http://192.168.37.220:5000/hostpredres";
+ 
+  var data = {};
+ data.word = document.getElementById("v1").value;
+ data.v1 = document.getElementById("v1").value;
+ data.v2 = document.getElementById("v2").value;
+
+
+ data.v3 = document.getElementById("v3").value;
+ data.v4 = document.getElementById("v4").value;
+
+ data.v5 = document.getElementById("v5").value;
+ data.v6 = document.getElementById("v6").value;
+
+ data.v7 = document.getElementById("v7").value;
+ data.v8 = document.getElementById("v8").value;
+
+ data.v9 = document.getElementById("v9").value;
+ data.v10 = document.getElementById("v10").value;
+
+
+  var json = JSON.stringify(data);
+ var xhr = new XMLHttpRequest();
+ xhr.open("POST", url, true);
+ xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+ xhr.onload = function () {
+  var admins= JSON.parse(xhr.responseText);
+  if (xhr.readyState == 4 && xhr.status == "200") {
+  console.table(admins);
+document.getElementById("res").innerHTML =   ` <center> <img height=200px width=300px  src="images/a.png" />  <br>  ` +  "recommendation place : " +  admins.res + " </center>"  ;
+
+ 
+
+
+
+  } else { 
+    alert(admins.message);
+ console.table(admins);
+ }
+ }
+xhr.send(json);
+ }
+}
+</script>
+
+
+</body>

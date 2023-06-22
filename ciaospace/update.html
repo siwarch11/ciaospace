@@ -1,0 +1,326 @@
+<script>
+  if(!localStorage.getItem("idUser"))
+  {
+    location.replace("signin.html");
+  }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="ThemeStarz">
+
+  <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="assets/fonts/elegant-fonts.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/zabuto_calendar.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+  <title>Ciao Space</title>
+
+</head>
+<body></body>
+<div class="page-wrapper">
+  <div id="page-header">
+  <header>
+    <div class="container">
+
+        <!--end secondary-nav-->
+    </div>
+    <!--end container-->
+    <hr>
+    <div class="container">
+        <div class="primary-nav">
+            <div class="left">
+                <a href="index.html" id="brand"><img src="Space (1).png" alt=""></a>
+                <a class="nav-trigger" data-toggle="collapse" href="#primary-nav" aria-expanded="false" aria-controls="primary-nav"><i class="fa fa-navicon"></i></a>
+            </div>
+            <!--end left-->
+            <div class="right" >
+                <nav id="primary-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="my-accommodations.html">Reservations</a></li>
+                        <li>
+                          <a href="listing.html">Offers</a>
+                         
+                      </li>
+                        <li class="active"><a href="edit.html">To guide you</a></li>
+               
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                     <li><a href="#" class="has-child">My acount</a>
+                            <ul class="child-nav">
+                                
+                                <li><a href="profile.html" id="usernameUser">Profile</a></li>
+                                <li><a href="signin.html" onclick="logout()">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!--end nav-->
+            </div>
+            <!--end right-->
+        </div>
+        <!--end primary-nav-->
+    </div>
+    <!--end container-->
+</header>
+    <!-- /.content-header -->
+
+</div>
+<div id="page-content">
+  <div class="container">
+      <ol class="breadcrumb">
+         
+      </ol>
+      
+      <!--end breadcrumb-->
+
+      <!--end main-content-->
+  </div>
+  <!--end container-->
+</div>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+      
+        
+          <!-- ./col -->
+        
+          <!-- ./col -->
+          
+          <!-- ./col -->
+          
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <div class="form-reservations">
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Edit Reservation</h3>
+                </div>
+                <form onsubmit="return false">
+                    <div class="card-body">
+                  
+                  <div class="form-group">
+                    <label for="exampleInputname">name</label>
+                    <input type="name" class="form-control" placeholder="Enter Name" id="name">
+                  </div>
+                 
+                      <div class="form-group">
+                        <label for="exampleInputname">Email</label>
+                        <input type="name" class="form-control" placeholder="Enter email" id="email">
+                      </div>
+                     
+                      <div class="form-group">
+                        <label for="exampleInputname">Mobile Phone</label>
+                        <input type="name" class="form-control" placeholder="mobile phone"  id="number">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputname">Booking Date</label>
+                        <input type="name" class="form-control" placeholder="Date"  id="date">
+                      </div>
+                      </div>
+                      <div class="card-footer">
+                <input type="submit" value="Edit" class="btn btn-primary btn-rounded scroll"  onclick="update()"> </div>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+  </div>
+    
+    <script>
+      var idOffre, idUser;
+      var url_string = window.location.href //url_string = "file:///C:/Users/Client/Desktop/pfe/ciaospace/update.html?id=623cc1644c500926b4655b94"
+      var url = new URL(url_string); //url = file:///C:/Users/Client/Desktop/pfe/ciaospace/update.html?id=623cc1644c500926b4655b94
+      var c = url.searchParams.get("id"); //c =628180426fbbd23ee4a998d0
+      console.log(c);
+    
+      // Post a user
+      var url3 = "http://192.168.37.220:3000/reservations/" + c ;
+      var xhr3 = new XMLHttpRequest();
+      xhr3.open("GET", url3, true);
+    
+      xhr3.onload = function () {
+          var users = JSON.parse(xhr3.responseText);
+          if (xhr3.readyState == 4 && xhr3.status == "200") {
+              document.getElementById("name").value = users.name;
+              document.getElementById("email").value = users.email;
+              document.getElementById("number").value = users.number;
+              document.getElementById("date").value = users.date;
+
+              idOffre = users.idOffre;
+              idUser = users.idUser;
+          } else {
+    
+              console.log("error");
+          }
+      }
+    
+      xhr3.send(null);
+    //`<a href="update.html?id=`+i._id+`">Update</a>`
+      function update(){
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(document.getElementById("name").value && document.getElementById("number").value){
+    if(document.getElementById("email").value.match(mailformat)){
+          var url_string = window.location.href
+          var url = new URL(url_string);
+          var c = url.searchParams.get("id");
+              
+                  var url = "http://192.168.37.220:3000/reservations/"+c;
+                                  
+                  var data = {};
+                  data.name   = document.getElementById("name").value;
+                  data.email      = document.getElementById("email").value;
+                  data.number   = document.getElementById("number").value;
+        data.idOffre = idOffre;
+        data.idUser = idUser;
+                                                          
+                  var json = JSON.stringify(data);
+                  var xhr = new XMLHttpRequest();
+                  xhr.open("PUT", url, true);
+                  xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                  xhr.onload = function () {
+                      var users = JSON.parse(xhr.responseText);
+                      if (xhr.readyState == 4 && xhr.status == "200") {
+                          alert("reservation Updated!");
+                          location.replace("my-accommodations.html");
+                      } else {
+                          console.error(reservations);
+                          location.replace("update.html");
+                      }
+                  }
+                  xhr.send(json);
+             
+      }
+      else{
+    alert("please enter a valid email")
+  }
+  }
+  else{
+    alert("please fill all fields")
+  }
+    }
+    </script>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+  <!-- /.content-wrapper -->
+  <footer id="page-footer">
+        
+    <!--end row-one-->
+    <div class="row-two clearfix">
+        <div class="container">
+            <div class="copyright pull-left">    <strong>Copyright &copy; 2022 <a target="" href="https://chaabengroup.com/">chaaben Technology Group</a>.</strong>
+                All rights reserved.
+             <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 1.0
+            </div></div>
+            <div class="footer-nav pull-right">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="listing.html">offers</a>
+                <a href="my-accommodations.html">Reservations</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="myaccount.html">My Account</a>
+            </div>
+        </div>
+        <div class="bg-transfer"><img src="assets/img/footer.jpg" alt=""></div>
+    </div>
+    <!--end row-two-->
+</footer>
+  <script>
+    var c =localStorage.getItem("idUser"); 
+     console.log(c);
+   
+     // Post a user
+     var url4 = "http://192.168.37.220:3000/users/" + c ;
+     var xhr4 = new XMLHttpRequest();
+     xhr4.open("GET", url4, true);
+   
+     xhr4.onload = function () {
+         var admins = JSON.parse(xhr4.responseText);
+         if (xhr4.readyState == 4 && xhr4.status == "200") {
+           document.getElementById("usernameUser").innerHTML =admins.fname +` `+admins.lname ;
+             
+         } else {
+   
+             console.log("error");
+         }
+     }
+   
+     xhr4.send(null);
+   </script>
+   <script>
+    function logout(){
+      var d = window.confirm("want to LogOut?");
+      if (d == true)
+      {
+        localStorage.removeItem("idUser");
+      }
+    }
+    </script>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

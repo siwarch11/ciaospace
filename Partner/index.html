@@ -1,0 +1,831 @@
+<script>
+    if(!localStorage.getItem("idPartner"))
+    {
+      location.replace("signin.html");
+    }
+  </script>
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<!-- Mirrored from themestarz.net/html/accommodo/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Apr 2022 11:35:50 GMT -->
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ThemeStarz">
+
+    <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/fonts/elegant-fonts.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/zabuto_calendar.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <title>Ciao Space</title>
+    <style>
+        .sty {
+          left: 0%;
+  
+          top: 18%;
+  
+          height: 100%;
+  
+          width: 100%;
+  
+          position: absolute;
+        }
+        .exemplesansserif {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+      </style>
+</head>
+
+<body>
+<div class="page-wrapper">
+    <div id="page-header">
+        <header>
+            <div class="container">
+                <div class="secondary-nav">
+                    <div class="nav-trigger"><a data-toggle="collapse" href="#secondary-nav" aria-expanded="false" aria-controls="secondary-nav"><i class="fa fa-user"></i></a></div>
+                    <div id="secondary-nav">
+                        <nav>
+                            <div class="left opacity-60">
+                                
+                                <a href="#"><i class="fa fa-phone"></i>+1 781-903-1047</a>
+                                <a href="mailto:hello@example.com"><i class="fa fa-envelope"></i>hello@ciaospace.com</a>
+                            </div>
+                            <!--end left-->
+                            <div class="right">
+                                <div class="element">
+                                    
+                                </div>
+                                <!--end element-->
+                                <div class="element">
+                                    <a href="C:/Users/Client/Desktop/pfe/ciaospace/signin.html" >Sign In</a>
+                                </div>
+                                <!--end element-->
+                                <div class="element">
+                                    <a href="C:/Users/Client/Desktop/pfe/ciaospace/signup.html" >Register</a>
+                                </div>
+                                <!--end element-->
+                                <div class="element">
+                                    
+                                </div>
+                                <!--end element-->
+                            </div>
+                            <!--end right-->
+                        </nav>
+                    </div>
+                </div>
+                <!--end secondary-nav-->
+            </div>
+            <!--end container-->
+            <hr>
+            <div class="container">
+                <div class="primary-nav">
+                    <div class="left">
+                        <a href="index.html" id="brand"><img src="assets/img/logo.png" alt=""></a>
+                        <a class="nav-trigger" data-toggle="collapse" href="#primary-nav" aria-expanded="false" aria-controls="primary-nav"><i class="fa fa-navicon"></i></a>
+                    </div>
+                    <!--end left-->
+                    <div class="right" >
+                        <nav id="primary-nav">
+                            <ul>
+                                <li class="active"><a href="index.html">Home</a></li>
+                               
+                                <li>
+                                    <a href="listing.html">Offers</a>
+                                   
+                                </li>
+                                </li>
+                                <li><a href="addoffer.html">Add Offers</a></li>
+                                <li><a href="myoffers.html">My Offers</a></li>
+                                <li><a href="reservations.html">Reservations</a></li>
+                                
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li>
+                                    <a href="#" class="has-child">My Account</a>
+                                <ul class="child-nav">
+                                        <li><a href="profile.html" id="usernamePartner">Profil</a></li>
+                                        <li><a href="signin.html" onclick="logout()">Logout</a></li>
+                                       
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-child">More</a>
+                                <ul class="child-nav">
+                                        <li><a class="fa fa-fw fa-hotel" href="hotel.html">Hotels</a></li>
+                                        <li><a class="fa fa-fw fa-cutlery " href="restaurant.html">Restaurants</a></li>
+                                       <li><a  class="fa fa-fw fa-calendar" href="event.html">Events</a></li>
+                                       <li><a class="fa fa-fw fa-beer" href="bar.html">Nightlife</a></li>
+                                       <li><a class="fa fa-fw fa-list-alt" href="other.html">Others</a></li>
+
+
+
+
+                                    </ul>
+                                </li>
+                                
+                                
+                            </ul>
+                        </nav>
+                        <!--end nav-->
+                    </div>
+                    <!--end right-->
+                </div>
+                <!--end primary-nav-->
+            </div>
+            <!--end container-->
+        </header>
+        <!--end header-->
+    </div>
+    <!--end page-header-->
+
+    <div id="page-content">
+        <div class="hero-section" data-height="600">
+            <form onsubmit="return false" id="form-hero">
+                <div class="hero-inner">
+                    <div class="hero-wrapper" >
+                        <div class="caption">
+                            <div class="inner">
+                                <div class="container">
+                                    
+                                        <h1 class="center">Your dream holiday starts here...</h1>
+                                    <div class="row no-gutters">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label class="label-on-input" for="address-autocomplete">Location</label>
+                                                <input type="text" class="form-control" id="address-autocomplete" name="location" placeholder="Enter Location or Place Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-2">
+                                            <div class="form-group">
+                                                <label class="label-on-input" for="form-check-in">Check In</label>
+                                                <input type="text" class="form-control date" id="form-check-in" name="nights" placeholder="Check In Date">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-2 col-sm-2">
+                                            <div class="form-group">
+                                                <button type="submit" onclick="recherche()" class="btn btn-default">Search</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end favorite-searches-->
+                                </div>
+                                <!--end container-->
+                                <div class="bg-transfer"><img src="assets/img/Back.jpg" alt=""></div>
+                                <!--end bg-transfer-->
+                            </div>
+                            <!--end inner-->
+                        </div>
+                        <!--end caption-->
+                        <div id="option" class="options">
+                            <div class="container">
+                                <div class="wrapper">
+                                    <h2>General</h2>
+                                    <div class="row">
+                                        <div class="col-md-8 col-sm-7">
+                                            <div class="exemplesansserif">
+                                                <ul class="checkboxes inline list-unstyled">
+
+                                                    <li><label><input type="checkbox" name="General"  id="24HourFrontDesk">24-Hour Front Desk </label></li>
+                                                    <li><label><input type="checkbox" name="General" id="alcohol">Alcohol </label></li>
+                                                    <li><label><input type="checkbox" name="General" id="Transport">Transport</label></li>
+                                                    <li><label><input type="checkbox" name="General" id="Appliessecuritymeasures">Applies security measures</label></li>
+                
+                                                </ul>
+                                        </div>
+                                            <!--end checkboxes-->
+                                        </div>
+                                        <!--end col-md-8-->
+                                        <div class="col-md-4 col-sm-5">
+                                            <div class="row">
+                                                
+                                                    <div class="form-group">
+                                                        
+                                                        <h2>Position</h2>
+                                                        <div class="exemplesansserif">
+                                                            <ul class="checkboxes inline half list-unstyled">
+
+                                                                <li><label><input type="checkbox" id="Nearthebeach">Near the beach</label></li>
+                                    <li><label><input type="checkbox" name="Position" id="Neartheforest">Near the forest</label></li>
+                                    <li><label><input type="checkbox" name="Position" id="Atthetowncenter">At the town center</label></li>
+                                    <li><label><input type="checkbox" name="Position"  id="Isolated">Isolated</label></li>
+                                                               
+    
+                                                            </ul>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                <!--end col-md-6-->
+                                                      </div>
+                                            <!--end row-->
+                                        </div>
+                                        <!--end col-md-4-->
+                                    </div>
+                                    <!--end row-->
+                                </div>
+                                <!--end wrapper-->
+                            </div>
+                            <!--end container-->
+                        </div>
+                        <!--end options-->
+                    </div>
+                    <!--end hero-wrapper-->
+                    <div id="options-hidden" class="collapse">
+                        <div class="container">
+                            <div class="wrapper">
+                                <h2>Additional</h2>
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-6">
+                                <div class="exemplesansserif">
+                                        
+                                    <ul class="checkboxes inline">
+
+                                        <li><label><input type="checkbox" name="Additional" id="FreeParking">Free Parking </label></li>
+                                        <li><label><input type="checkbox"  name="Additional"  id="FreeWiFi">Free WiFi</label></li>
+                                        <li><label><input type="checkbox"  name="Additional" id="Gym">Gym</label></li>
+
+
+
+                                    </ul>
+                                    </div>
+                                        <!--end checkboxes-->
+                                    </div>
+                                    <!--end col-md-8-->
+                                    <div class="col-md-4"></div>
+                                    <!--end col-md-4-->
+                                </div>
+                                <!--end row-->
+                            </div>
+                            <!--end wrapper-->
+                        </div>
+                        <!--end container-->
+                    </div>
+                </div>
+                <!--end hero-inner-->
+                <div class="plate">
+                    <a data-toggle="collapse" href="#options-hidden" aria-expanded="false" aria-controls="options-hidden">View Further Options</a>
+                </div>
+                <!--end plate-->
+            </form>
+            <!--end form-->
+            <div class="map-wrapper">
+                <div class="plate white">
+                    <a href="#" data-switch="#form-hero">Show Map</a>
+                </div>
+                <!--end plate-->
+                <div id="googleMap" style="width: 100%; height: 900px"></div>
+                <!--<img src="assets/img/map.jpg" alt="">-->
+            </div>
+        </div>
+        <!--end hero-section-->
+        <div class="block">
+            <div class="container">
+                <div class="row" id="recherche">
+                    
+                    <!--col-md-3-->
+                </div>
+            </div></div>
+        <div class="block">
+            <div class="container">
+                <div class="title">
+                    <h2>Top Offers</h2>
+                </div>
+                <div class="row" id="listoffre">
+                    
+                    <!--col-md-3-->
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+        </div>
+        <!--end block-->
+
+        <!--end block-->
+    </div>
+    <!--end page-content-->
+
+    <footer id="page-footer">
+        
+        <!--end row-one-->
+        <div class="row-two clearfix">
+            <div class="container">
+                <div class="copyright pull-left">    <strong>Copyright &copy; 2022 <a target="" href="https://chaabengroup.com/">chaaben Technology Group</a>.</strong>
+                    All rights reserved.
+                 <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0
+                </div></div>
+                <div class="footer-nav pull-right">
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="listing.html">offers</a>
+                    <a href="reservations.html">Reservations</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="myaccount.html">My Account</a>
+                    <a href="#more">More</a>
+                </div>
+            </div>
+            <div class="bg-transfer"><img src="assets/img/footer.jpg" alt=""></div>
+        </div>
+        <!--end row-two-->
+    </footer>
+    <!--end page-footer-->
+</div>
+<!--end page-wrapper-->
+<a href="#page-header" class="to-top scroll" data-show-after-scroll="600"><i class="arrow_up"></i></a>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript" src="assets/js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script type="text/javascript" src="assets/js/infobox.js"></script>
+<script type="text/javascript" src="assets/js/markerclusterer_packed.js"></script>
+<script type="text/javascript" src="assets/js/richmarker-compiled.js"></script>
+<script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="assets/js/icheck.min.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+
+<script type="text/javascript" src="assets/js/maps.js"></script>
+<script type="text/javascript" src="assets/js/custom.js"></script>
+
+<!--[if lte IE 9]>
+<script src="assets/js/ie.js"></script>
+<![endif]-->
+
+<script>
+    var _latitude = 48.47292127;
+    var _longitude = 4.28672791;
+    var element = "map-item";
+    var useAjax = true;
+    bigMap(_latitude,_longitude, element, useAjax);
+</script>
+<script>
+   var c =localStorage.getItem("idPartner");
+    console.log(c);
+
+    // Post a user
+    var url3 = "http://192.168.37.220:3000/partners/" + c ;
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open("GET", url3, true);
+
+    xhr3.onload = function () {
+        var admins = JSON.parse(xhr3.responseText);
+        if (xhr3.readyState == 4 && xhr3.status == "200") {
+            document.getElementById("usernamePartner").innerHTML =admins.companyName;
+
+          
+        } else {
+
+            console.log("error");
+        }
+    }
+
+    xhr3.send(null);
+</script>
+<script>
+    function logout(){
+      var d = window.confirm("want to LogOut?");
+      if (d == true)
+      {
+        localStorage.removeItem("idUser");
+      }
+    }
+  </script>
+  
+  <script>
+      
+   
+       
+      
+    var j = 0;
+    var request = new XMLHttpRequest()
+    request.open('GET', 'http://192.168.37.220:3000/offres', true)
+    request.onload = function() {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response)
+      var ee = document.getElementById("listoffre");
+      data.forEach(i => {
+                      console.log(j);
+                  if(j < 4){
+                  if(i.price < 100){
+            
+              ch =   `
+                <div class="item list contact" data-map-latitude="48.87" data-map-longitude="2.29" data-id="` +
+              j +
+              `">
+                                    <div class="image-wrapper">
+                                       
+                                       
+                                        <div class="image">
+                                            <a href="detail.html?id=` +
+              i._id +
+              `" class="wrapper">
+                                                <div class="gallery">
+                                                    <img src="` +
+              i.image +
+              `" alt=""class="owl-lazy">
+                                                    
+                                                </div>
+                                            </a>
+                                            <div class="map-item">
+                                                <button class="btn btn-close"><i class="fa fa-close"></i></button>
+                                                <div class="map-wrapper"></div>
+                                            </div>
+                                            <!--end map-item-->
+                                            <div class="owl-navigation"></div>
+                                            <!--end owl-navigation-->
+                                        </div>
+                                    </div>
+                                    <!--end image-->
+                                    <div class="description">
+                                        <div class="meta">
+                                            
+                                            
+                                        </div>
+                                        <!--end meta-->
+                                        <div class="info">
+                                            <a href="detail.html?id=` +
+              i._id +
+              `"><h3>` +
+              i.title +
+              `</h3></a>
+                                            <figure class="location"><h3>` +
+              i.region +
+              `</h3></figure>
+                                            <figure class="label label-info">` +
+              i.category +
+              `</figure>
+                                            <figure class="live-info">` +
+              i.description +
+              `</figure>
+                                            
+                                            <div class="price-info">From<span class="price">` +
+              i.price +
+              `</span></div>
+                                            <a href="detail.html?id=` +
+              i._id +
+              `" class="btn btn-rounded btn-default btn-framed btn-small">View detail</a>
+                                        </div>
+                                        <!--end info-->
+                                    </div>
+                                    <!--end description-->
+                                </div>
+                 
+                `;            j = j+1;
+                      
+            ee.insertAdjacentHTML('beforeend',ch);
+        }
+    }
+      })
+    }
+  
+      
+    // Send request
+    request.send()  
+
+    </script>
+
+    
+  <script>
+    var facility = "";
+      function recherche(){
+        document.getElementById("recherche").innerHTML = `<h2>Search Result: </h2>`;
+        
+        
+        if(document.getElementById("24HourFrontDesk").checked == true){
+            facility += "24-Hour Front Desk, ";
+        }
+        if(document.getElementById("alcohol").checked == true){
+            facility += "Alcohol, ";
+        }
+        if(document.getElementById("Transport").checked == true){
+            facility += "Transport, ";
+        }
+        if(document.getElementById("Appliessecuritymeasures").checked == true){
+            facility += "Applies security measures, ";
+        }
+       
+        if(document.getElementById("FreeParking").checked == true){
+            facility += "Free Parking, ";
+        }
+        if(document.getElementById("Appliessecuritymeasures").checked == true){
+            facility += "Applies security measures, ";
+        }
+        if(document.getElementById("FreeWiFi").checked == true){
+            facility += "Free-WiFi, ";
+        }
+        if(document.getElementById("Gym").checked == true){
+            facility += "Gym, ";
+        }
+        if(document.getElementById("Nearthebeach").checked == true){
+            facility += "Near the beach, ";
+        }
+        if(document.getElementById("Neartheforest").checked == true){
+            facility += "Near the forest, ";
+        }
+        if(document.getElementById("Atthetowncenter").checked == true){
+            facility += "At the town center, ";
+        }
+        if(document.getElementById("Isolated").checked == true){
+            facility += "Isolated, ";
+        }
+          var namePlace = document.getElementById("address-autocomplete").value;
+          var date = document.getElementById("form-check-in").value;
+          var general = document.getElementById("option").value;
+          var position = document.getElementById("options-hidden").value;
+
+        
+    var request = new XMLHttpRequest()
+    request.open('GET', 'http://192.168.37.220:3000/offres', true)
+    request.onload = function() {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response)
+      var ee = document.getElementById("recherche");
+      data.forEach(i => {
+                  if((i.title.match(namePlace)) &&  (i.facility.match(general)) && (i.facility.match(position))){
+            
+              ch = `
+              <div class="col-md-3 col-sm-6">
+                <div class="item big equal-height" data-map-latitude="48.87" data-map-longitude="2.29" data-id="1">
+                    <div class="item-wrapper">
+                        <div class="image">
+                            <div class="mark-circle description" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis erat vel quam aliquet hendrerit semper eget elit. Aenean tincidunt ultrices bibendum. Proin nisi erat, iaculis non pulvinar a, scelerisque ut est. "><i class="fa fa-question"></i></div>
+                            <div class="mark-circle map" data-toggle="tooltip" data-placement="right" title="Show on map"><i class="fa fa-map-marker"></i></div>
+                            <div class="mark-circle top" data-toggle="tooltip" data-placement="right" title="Top accommodation"><i class="fa fa-thumbs-up"></i></div>
+                            <a href="detail.html?id=`+i._id+`" class="wrapper">
+                                <div class="gallery">
+                                    <img src="`+i.image+`" alt="">
+                                    <img src="#" class="owl-lazy" alt="" data-src="assets/img/items/02.jpg">
+                                    <img src="#" class="owl-lazy" alt="" data-src="assets/img/items/03.jpg">
+                                </div>
+                            </a>
+                            <div class="owl-navigation"></div>
+                            <!--end owl-navigation-->
+                        </div>
+                        <!--end image-->
+                        <div class="description">
+                            <div class="meta">
+                                <span><i class="fa fa-star"></i>8.9</span>
+                                <span><i class="fa fa-bed"></i>365</span>
+                            </div>
+                            <div class="info">
+                                <figure class="label label-info">Hotel</figure>
+                                <a href="detail.html"><h3>`+i.title+`</h3></a>
+                                <figure class="location">Montenegro</figure>
+                            </div>
+                        </div>
+                        <!--end description-->
+                        <div class="map-item">
+                            <button class="btn btn-close"><i class="fa fa-close"></i></button>
+                            <div class="map-wrapper"></div>
+                        </div>
+                        <!--end map-item-->
+                    </div>
+                </div>
+                <!--end item-->
+            </div> `;
+            j = j+1;
+                      
+            ee.insertAdjacentHTML('beforeend',ch);
+            
+    }
+      })
+    }
+  
+      
+    // Send request
+    request.send()    }
+    </script>
+    
+    <script>
+        function calcCrow(lat1, lon1, lat2, lon2) {
+          var R = 6371; // km
+          var dLat = toRad(lat2 - lat1);
+          var dLon = toRad(lon2 - lon1);
+          var lat1 = toRad(lat1);
+          var lat2 = toRad(lat2);
+  
+          var a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.sin(dLon / 2) *
+              Math.sin(dLon / 2) *
+              Math.cos(lat1) *
+              Math.cos(lat2);
+          var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+          var d = R * c;
+          return d;
+        }
+  
+        // Converts numeric degrees to radians
+        function toRad(Value) {
+          return (Value * Math.PI) / 180;
+        }
+      </script>
+      <script>
+        var xx;
+        var yy;
+  
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else {
+            alert("Geolocation is not supported by this browser.");
+          }
+        }
+  
+        function showPosition(position) {
+          xx = position.coords.latitude;
+          yy = position.coords.longitude;
+          initMap(xx, yy);
+        }
+  
+        const chicago = { lat: 41.85, lng: -87.65 };
+  
+        function CenterControl(controlDiv, map) {
+          // Set CSS for the control border.
+          const controlUI = document.createElement("div");
+  
+          controlUI.style.backgroundColor = "#fff";
+          controlUI.style.border = "2px solid #fff";
+          controlUI.style.borderRadius = "3px";
+          controlUI.style.boxShadow = "0 2px 6px rgba(0,0,0,.3)";
+          controlUI.style.cursor = "pointer";
+          controlUI.style.marginTop = "8px";
+          controlUI.style.marginBottom = "22px";
+          controlUI.style.textAlign = "center";
+          controlUI.title = "Click to recenter the map";
+          controlDiv.appendChild(controlUI);
+  
+          // Set CSS for the control interior.
+          const controlText = document.createElement("div");
+  
+          controlText.style.color = "rgb(25,25,25)";
+          controlText.style.fontFamily = "Roboto,Arial,sans-serif";
+          controlText.style.fontSize = "16px";
+          controlText.style.lineHeight = "38px";
+          controlText.style.paddingLeft = "5px";
+          controlText.style.paddingRight = "5px";
+          controlText.innerHTML = "Refresh";
+          controlUI.appendChild(controlText);
+          // Setup the click event listeners: simply set the map to Chicago.
+          controlUI.addEventListener("click", () => {
+            alert("test");
+          });
+        }
+      </script>
+      <script async type="text/javascript">
+        function toset(d) {
+          d = d;
+  
+          return d;
+        }
+  
+        var pos = {
+          url: "images/marker.png",
+          scaledSize: new google.maps.Size(45, 45),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(25, 50),
+        };
+        var truck = {
+          url: "images/resto.jpg",
+          scaledSize: new google.maps.Size(45, 45),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(25, 50),
+        };
+  
+        // On initialise la latitude et la longitude de Tunis (centre de la carte)
+        var x = xx;
+        var y = yy;
+        var map = null;
+        // Fonction d'initialisation de la carte
+        function initMap(x, y) {
+          map = new google.maps.Map(document.getElementById("googleMap"), {
+            center: new google.maps.LatLng(x, y),
+            zoom: 11,
+            //mapTypeId: "satellite",
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: true,
+            scrollwheel: false,
+            mapTypeControlOptions: {
+              style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            navigationControl: true,
+            navigationControlOptions: {
+              style: google.maps.NavigationControlStyle.ZOOM_PAN,
+            },
+          });
+  
+          const centerControlDiv = document.createElement("div");
+          centerControlDiv.innerHTML = "Refresh";
+  
+          //CenterControl(centerControlDiv, map);
+          map.controls[google.maps.ControlPosition.TOP_CENTER].push(
+            centerControlDiv
+          );
+  
+          var marker = new google.maps.Marker({
+            position: { lat: x, lng: y },
+            title: "your position",
+            icon: pos,
+            map: map,
+          });
+  
+          var lineCoordinates = [];
+  
+          $.ajax({
+            // On pointe vers le fichier selectData.php
+            url: "http://192.168.37.220:3000/partners",
+          }).done(function (json) {
+            // Si on obtient une réponse, elle est stockée dans la variable json
+            console.log(json);
+            // On construit l'objet villes à partir de la variable json
+            //var positions = JSON.parse(json);
+            // console.log(positions);
+            // On parcourt l'objet villes
+  
+            json = toset(json);
+  
+            for (position in json) {
+              var d = calcCrow(x, y, json[position].x, json[position].y);
+              var t = d * 1.5;
+              vv = new google.maps.LatLng(json[position].x, json[position].y);
+  
+              lineCoordinates.push(vv);
+  
+              var marker = new google.maps.Marker({
+                // parseFloat nous permet de transformer la latitude et la longitude en nombre décimal
+                position: {
+                  lat: parseFloat(json[position].x),
+                  lng: parseFloat(json[position].y),
+                },
+                title: json[position].matricule,
+                icon: truck,
+                map: map,
+              });
+  
+              d = d.toFixed(2);
+              t = t.toFixed(2);
+  
+              const contentString =
+                `
+                 <div style='float:left'><img  height='100px' width='100px' src='images/resto.jpg'></div>
+                 <div style='float:right; padding: 10px;'><b>Restaurant dans ` +
+                t +
+                ` min</b><br/>
+                  Distance ` +
+                d +
+                ` km<br/>
+                   
+                   </div>
+                 `;
+  
+              const infowindow = new google.maps.InfoWindow({
+                content: contentString,
+              });
+  
+              /*
+                  const infowindow = new google.maps.InfoWindow({
+              content: contentString,
+          });
+          */
+  
+              marker.addListener("click", function () {
+                infowindow.open(map, this);
+              });
+  
+              // assuming you also want to hide the infowindow when user mouses-out
+              map.addListener("click", function () {
+                infowindow.close();
+              });
+            }
+  
+            /*
+             const flightPath = new google.maps.Polyline({
+                 path: lineCoordinates,
+                 geodesic: true,
+                 strokeColor: "#FF0000",
+                 strokeOpacity: 1.0,
+                 strokeWeight: 6,
+               });
+             
+               flightPath.setMap(map);
+             */
+          });
+        }
+  
+        window.onload = function () {
+          // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+          getLocation();
+        };
+      </script>
+</body>
+</html>

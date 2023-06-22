@@ -1,0 +1,337 @@
+<script>
+  if (!localStorage.getItem("idUser")) {
+    location.replace("signin.html");
+  }
+</script>
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <!-- Mirrored from themestarz.net/html/accommodo/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Apr 2022 11:37:36 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ThemeStarz" />
+
+    <link
+      href="assets/fonts/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/fonts/elegant-fonts.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap/css/bootstrap.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/zabuto_calendar.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+    <title></title>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <div id="page-header">
+        <header>
+          <div class="container">
+            <div class="secondary-nav">
+              <div class="nav-trigger">
+                <a
+                  data-toggle="collapse"
+                  href="#secondary-nav"
+                  aria-expanded="false"
+                  aria-controls="secondary-nav"
+                  ><i class="fa fa-user"></i
+                ></a>
+              </div>
+              <div id="secondary-nav">
+                <nav>
+                  <div class="left opacity-60">
+                    <a href="#"><i class="fa fa-phone"></i>+1 781-903-1047</a>
+                    <a href="mailto:hello@example.com"
+                      ><i class="fa fa-envelope"></i>hello@ciaospace.com</a
+                    >
+                  </div>
+                  <!--end left-->
+                  <div class="right">
+                    <div class="element"></div>
+                    <!--end element-->
+                    <div class="element">
+                      <a
+                        href="C:/Users/Client/Desktop/pfe/Admin/login-form-17/index.html"
+                        data-toggle="modal"
+                        data-target="#mymodal"
+                        >Sign In</a
+                      >
+                    </div>
+                    <!--end element-->
+                    <div class="element">
+                      <a
+                        href="C:/Users/Client/Desktop/pfe/Admin/login-form-17/signup.html"
+                        data-toggle="modal"
+                        data-target="#mymodal"
+                        >Register</a
+                      >
+                    </div>
+                    <!--end element-->
+                    <div class="element"></div>
+                    <!--end element-->
+                  </div>
+                  <!--end right-->
+                </nav>
+              </div>
+            </div>
+            <!--end secondary-nav-->
+          </div>
+          <!--end container-->
+          <hr />
+          <div class="container">
+            <div class="primary-nav">
+              <div class="left">
+                <a href="index.html" id="brand"
+                  ><img src="assets/img/logo.png" alt=""
+                /></a>
+                <a
+                  class="nav-trigger"
+                  data-toggle="collapse"
+                  href="#primary-nav"
+                  aria-expanded="false"
+                  aria-controls="primary-nav"
+                  ><i class="fa fa-navicon"></i
+                ></a>
+              </div>
+              <!--end left-->
+              <div class="right">
+                <nav id="primary-nav">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="about-us.html">About Us</a></li>
+                    <li>
+                      <a href="listing.html">Offers</a>
+                    </li>
+                    <li><a href="my-accommodations.html">Reservations</a></li>
+                    <li>
+                      <a href="edit.html" class="has-child">To guide you</a>
+                    </li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li>
+                      <a href="#" class="has-child">My Account</a>
+                      <ul class="child-nav">
+                        <li>
+                          <a href="profile.html" id="usernameUser">Profil</a>
+                        </li>
+                        <li>
+                          <a href="signin.html" onclick="logout()">Logout</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="has-child">More</a>
+                      <ul class="child-nav">
+                        <li>
+                          <a class="fa fa-fw fa-hotel" href="hotel.html"
+                            >Hotels</a
+                          >
+                        </li>
+                        <li>
+                          <a class="fa fa-fw fa-cutlery" href="restaurant.html"
+                            >Restaurants</a
+                          >
+                        </li>
+                        <li>
+                          <a class="fa fa-fw fa-calendar" href="event.html"
+                            >Events</a
+                          >
+                        </li>
+                        <li>
+                          <a class="fa fa-fw fa-beer" href="bar.html"
+                            >Nightlife</a
+                          >
+                        </li>
+                        <li>
+                          <a class="fa fa-fw fa-list-alt" href="other.html"
+                            >Others</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+                <!--end nav-->
+              </div>
+              <!--end right-->
+            </div>
+            <!--end primary-nav-->
+          </div>
+          <!--end container-->
+        </header>
+        <!--end header-->
+      </div>
+      <!--end page-header-->
+
+      <div id="page-content">
+        <div class="container">
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Listing</a></li>
+            <li class="active">Detail</li>
+          </ol>
+          <!--end breadcrumb-->
+          <div class="row">
+            <div class="col-md-3">
+              <div class="sidebar">
+                <div class="box filter">
+                  <h2>About Us</h2>
+                  <ul class="links">
+                    <li class="active"><a href="about-us.html">About Us</a></li>
+
+                    <li>
+                      <a href="terms-and-conditions.html">Terms & Conditions</a>
+                    </li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                  </ul>
+                </div>
+                <!--end filter-->
+              </div>
+              <!--end sidebar-->
+            </div>
+            <!--end col-md-3-->
+            <div class="col-md-9">
+              <div class="main-content">
+                <div class="title">
+                  <h1>About Us</h1>
+                </div>
+                <!--end title-->
+                <section>
+                  <h2>What is ciao space?</h2>
+                  <p>
+                    Ciao Space is the Tunisian tourist portal providing a
+                    practical and interactive guide to inform tourists and
+                    Tunisians about Tunisia at the click of a button.
+                  </p>
+                  <p>
+                    ciao space for good deals, invitations to events, and many
+                    other exclusive benefits
+                  </p>
+                </section>
+              </div>
+              <!--end main-content-->
+            </div>
+            <!--end col-md-9-->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end container-->
+      </div>
+      <!--end page-content-->
+
+      <footer id="page-footer">
+        <div class="row-one">
+          <div class="container">
+            <div class="logos">
+              <!--/ .logo-->
+            </div>
+            <!--/ .logos-->
+          </div>
+        </div>
+        <!--end row-one-->
+        <div class="row-two clearfix">
+          <div class="container">
+            <div class="copyright pull-left">
+              (C) 2016 Your Company, All Rights Reserved
+            </div>
+            <div class="footer-nav pull-right">
+              <a href="index.html">Home</a>
+              <a href="about-us.html">About Us</a>
+              <a href="listing.html">Listing</a>
+              <a href="contact-us.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="bg-transfer">
+            <img src="assets/img/footer.jpg" alt="" />
+          </div>
+        </div>
+        <!--end row-two-->
+      </footer>
+      <!--end page-footer-->
+    </div>
+    <script>
+      var c = localStorage.getItem("idUser");
+      console.log(c);
+
+      // Post a user
+      var url3 = "http://192.168.37.220:3000/users/" + c;
+      var xhr3 = new XMLHttpRequest();
+      xhr3.open("GET", url3, true);
+
+      xhr3.onload = function () {
+        var admins = JSON.parse(xhr3.responseText);
+        if (xhr3.readyState == 4 && xhr3.status == "200") {
+          document.getElementById("usernameUser").innerHTML =
+            admins.fname + ` ` + admins.lname;
+        } else {
+          console.log("error");
+        }
+      };
+
+      xhr3.send(null);
+    </script>
+    <script>
+      function logout() {
+        var d = window.confirm("want to LogOut?");
+        if (d == true) {
+          localStorage.removeItem("idUser");
+        }
+      }
+    </script>
+    <!--end page-wrapper-->
+    <a href="#page-header" class="to-top scroll" data-show-after-scroll="600"
+      ><i class="arrow_up"></i
+    ></a>
+    <script type="text/javascript" src="assets/js/jquery-2.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://maps.google.com/maps/api/js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/bootstrap/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.validate.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/bootstrap-datepicker.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/icheck.min.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/maps.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+    <!--[if lte IE 9]>
+      <script src="assets/js/ie.js"></script>
+    <![endif]-->
+  </body>
+</html>

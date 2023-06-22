@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Login 07</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+							<div class="text w-100">
+								<h2>Welcome to Sign Up</h2>
+								<p>You already have an account</p>
+								<a href="signin.html" class="btn btn-white btn-outline-white">Sign In</a>
+							</div>
+			      </div>
+						<div class="login-wrap p-4 p-lg-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Sign Up</h3>
+			      		</div>
+								<div class="w-100">
+									<p class="social-media d-flex justify-content-end">
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+									</p>
+								</div>
+			      	</div>
+							<form action="#" id="register" class="signin-form" onsubmit="return false">
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">First Name</label>
+                                    <input type="text" class="form-control" placeholder="First name" required id="fname">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">Last Name</label>
+                                    <input type="text" class="form-control" placeholder="Last name" required id="lname">
+                                </div>
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="name">Email</label>
+			      			<input type="text" class="form-control" placeholder="Enter your email" required id="email">
+			      		</div>
+		            <div class="form-group mb-3">
+		            	<label class="label" for="password">Password</label>
+		              <input type="password" class="form-control" placeholder="Password" required id="password">
+		            </div>
+		            <div class="form-group">
+		            	<button type="submit" class="form-control btn btn-primary submit px-3" onclick="signup()">Sign Up</button>
+		            </div>
+		            <div class="form-group d-md-flex">
+
+		          </form>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <script>
+        function signup(){
+            var url = "http://192.168.37.220:3000/users";
+            var data = {};
+            data.fname = document.getElementById("fname").value;
+            data.lname = document.getElementById("lname").value;
+            data.email = document.getElementById("email").value;
+            data.password = document.getElementById("password").value;
+            var json = JSON.stringify(data);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+            xhr.onload = function () {
+                var users= JSON.parse(xhr.responseText);
+                if (xhr.readyState == 4 && xhr.status == "200") {
+                    console.table(users);
+                    alert("your registered successfully");
+                    location.replace("signin.html");
+                } else {
+                    alert(users.message);
+                    console.table(users);
+                }
+            }
+            xhr.send(json);
+        }
+    </script>
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+

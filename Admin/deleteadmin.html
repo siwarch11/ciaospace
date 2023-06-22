@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var d = window.confirm("want to Delete");
+      if (d == true) {
+        var url_string = window.location.href; //=file:///C:/Users/Client/Desktop/pfe/Admin/deleteadmin.html?id=62420d489c3270402cbf0964
+        var url = new URL(url_string); //=file:///C:/Users/Client/Desktop/pfe/Admin/deleteadmin.html?id=62420d489c3270402cbf0964
+        var c = url.searchParams.get("id"); //=62420d489c3270402cbf0964
+        console.log(c);
+        // Post a user
+        var url3 = "http://192.168.37.220:3000/admins/" + c;
+        var xhr3 = new XMLHttpRequest();
+        xhr3.open("DELETE", url3, true);
+        xhr3.onload = function () {
+          if (xhr3.readyState == 4 && xhr3.status == "200") {
+            location.replace("admins.html");
+            event.preventDefault();
+          } else {
+            console.log("error");
+          }
+        };
+        xhr3.send(null);
+      } else {
+        location.replace("admins.html");
+      }
+    </script>
+  </body>
+</html>

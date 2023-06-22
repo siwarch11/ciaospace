@@ -1,0 +1,369 @@
+<script>
+  if (!localStorage.getItem("idUser")) {
+    location.replace("signin.html");
+  }
+</script>
+<!DOCTYPE html>
+
+<html lang="en-US">
+  <!-- Mirrored from themestarz.net/html/accommodo/terms-and-conditions.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Apr 2022 11:37:59 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ThemeStarz" />
+
+    <link
+      href="assets/fonts/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/fonts/elegant-fonts.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap/css/bootstrap.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/zabuto_calendar.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+    <title>Ciao Space</title>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <div id="page-header">
+        <header>
+          <div class="container">
+            <div class="secondary-nav">
+              <div class="nav-trigger">
+                <a
+                  data-toggle="collapse"
+                  href="#secondary-nav"
+                  aria-expanded="false"
+                  aria-controls="secondary-nav"
+                  ><i class="fa fa-user"></i
+                ></a>
+              </div>
+              <div id="secondary-nav">
+                <nav>
+                  <div class="left opacity-60">
+                    <a href="#"><i class="fa fa-phone"></i>+1 781-903-1047</a>
+                    <a href="mailto:hello@example.com"
+                      ><i class="fa fa-envelope"></i>hello@ciaospace.com</a
+                    >
+                  </div>
+                  <!--end left-->
+                  <div class="right">
+                    <div class="element"></div>
+                    <!--end element-->
+                    <div class="element">
+                      <a
+                        href="C:/Users/Client/Desktop/pfe/Admin/login-form-17/index.html"
+                        data-toggle="modal"
+                        data-target="#mymodal"
+                        >Sign In</a
+                      >
+                    </div>
+                    <!--end element-->
+                    <div class="element">
+                      <a
+                        href="C:/Users/Client/Desktop/pfe/Admin/login-form-17/signup.html"
+                        data-toggle="modal"
+                        data-target="#mymodal"
+                        >Register</a
+                      >
+                    </div>
+                    <!--end element-->
+                    <div class="element"></div>
+                    <!--end element-->
+                  </div>
+                  <!--end right-->
+                </nav>
+              </div>
+            </div>
+            <!--end secondary-nav-->
+          </div>
+          <!--end container-->
+          <hr />
+          <div class="container">
+            <div class="primary-nav">
+              <div class="left">
+                <a href="index.html" id="brand"
+                  ><img src="assets/img/logo.png" alt=""
+                /></a>
+                <a
+                  class="nav-trigger"
+                  data-toggle="collapse"
+                  href="#primary-nav"
+                  aria-expanded="false"
+                  aria-controls="primary-nav"
+                  ><i class="fa fa-navicon"></i
+                ></a>
+              </div>
+              <!--end left-->
+              <div class="right">
+                <nav id="primary-nav">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="about-us.html">About Us</a></li>
+                    <li>
+                      <a href="listing.html">Offers</a>
+                    </li>
+                    <li><a href="my-accommodations.html">Reservations</a></li>
+                    <li>
+                      <a href="edit.html" class="has-child">To guide you</a>
+                    </li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li>
+                      <a href="#" class="has-child">My Account</a>
+                      <ul class="child-nav">
+                        <li>
+                          <a href="profile.html" id="usernameUser">Profil</a>
+                        </li>
+                        <li>
+                          <a href="signin.html" onclick="logout()">Logout</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="submit">
+                      <a href="submit.html"
+                        ><span>Submit</span
+                        ><i
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Submit"
+                          ><img src="assets/img/plus.png" alt="" /></i
+                      ></a>
+                    </li>
+                  </ul>
+                </nav>
+                <!--end nav-->
+              </div>
+              <!--end right-->
+            </div>
+            <!--end primary-nav-->
+          </div>
+          <!--end container-->
+        </header>
+        <!--end header-->
+      </div>
+      <!--end page-header-->
+
+      <div id="page-content">
+        <div class="container">
+          <ol class="breadcrumb"></ol>
+          <!--end breadcrumb-->
+          <div class="row">
+            <div class="col-md-3">
+              <div class="sidebar">
+                <div class="box filter">
+                  <ul class="links">
+                    <li class="active">
+                      <a href="terms-and-conditions.html">Terms & Conditions</a>
+                    </li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                  </ul>
+                </div>
+                <!--end filter-->
+              </div>
+              <!--end sidebar-->
+            </div>
+            <!--end col-md-3-->
+            <div class="col-md-9">
+              <div class="main-content">
+                <div class="title">
+                  <h1>Terms & Conditions</h1>
+                </div>
+                <!--end title-->
+                <section>
+                  <h2>Welcome to ciao space Portal!</h2>
+                  <p>
+                    www.ciaospase.tn Type of site: showcase The purpose of this
+                    privacy policy The purpose of this privacy policy is to
+                    inform users of our site of the personal data that we will
+                    collect and the following information, where applicable: The
+                    personal data we will collect Use of collected data Who has
+                    access to the data collected Site user rights The site's
+                    cookie policy This Privacy Policy operates in conjunction
+                    with our Site Terms of Service.
+                  </p>
+                </section>
+                <section>
+                  <h2>Cookies</h2>
+                  <p>
+                    A cookie is a small file, stored on a user's hard drive by
+                    the website. Its purpose is to collect data relating to the
+                    user's browsing habits. We use the following types of
+                    cookies on our site: Analytical cookies This allows us to
+                    improve the design and functionality of our site by
+                    collecting data about the content you access and engage with
+                    while using our site. You can choose to be notified each
+                    time a cookie is transmitted. You can also choose to disable
+                    cookies entirely in your Internet browser, but this may
+                    decrease the quality of your user experience.
+                  </p>
+                </section>
+
+                <section>
+                  <h2>Applicable laws</h2>
+
+                  <p>
+                    In accordance with the General Data Protection Regulation
+                    (GDPR), this privacy policy complies with the following
+                    regulations. Personal data must be: processed in a lawful,
+                    fair and transparent manner with regard to the data subject
+                    (lawfulness, fairness, transparency); collected for
+                    specified, explicit and legitimate purposes, and not further
+                    processed in a manner incompatible with those purposes;
+                    further processing for archival purposes in the public
+                    interest, for scientific or historical research purposes or
+                    for statistical purposes is not considered, in accordance
+                    with Article 89(1), to be incompatible with the initial
+                    purposes (limitation purposes); adequate, relevant and
+                    limited to what is necessary in relation to the purposes for
+                    which they are processed (data minimization); accurate and,
+                    where necessary, kept up to date; all reasonable steps must
+                    be taken to ensure that personal data which are inaccurate,
+                    having regard to the purposes for which they are processed,
+                    are erased or rectified without delay (accuracy); kept in a
+                    form allowing the identification of the persons concerned
+                    for a period not exceeding that necessary with regard to the
+                    purposes for which they are processed; personal data may be
+                    stored for longer periods insofar as they will be processed
+                    exclusively for archival purposes in the public interest,
+                    for scientific or historical research purposes or for
+                    statistical purposes in accordance with Article 89 ,
+                    paragraph 1, provided that the appropriate technical and
+                    organizational measures required by the Regulation are
+                    implemented in order to guarantee the rights and freedoms of
+                    the data subject (limitation of storage); processed in such
+                    a way as to ensure appropriate security of personal data,
+                    including protection against unauthorized or unlawful
+                    processing and against accidental loss, destruction or
+                    damage, using appropriate technical or organizational
+                    measures (integrity and confide
+                  </p>
+                </section>
+              </div>
+              <!--end main-content-->
+            </div>
+            <!--end col-md-9-->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end container-->
+      </div>
+      <!--end page-content-->
+
+      <footer id="page-footer">
+        <!--end row-one-->
+        <div class="row-two clearfix">
+          <div class="container">
+            <div class="copyright pull-left">
+              <strong
+                >Copyright &copy; 2022
+                <a target="" href="https://chaabengroup.com/"
+                  >chaaben Technology Group</a
+                >.</strong
+              >
+              All rights reserved.
+              <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 1.0
+              </div>
+            </div>
+            <div class="footer-nav pull-right">
+              <a href="index.html">Home</a>
+              <a href="about-us.html">About Us</a>
+              <a href="listing.html">offers</a>
+              <a href="my-accommodations.html">Reservations</a>
+              <a href="contact-us.html">Contact Us</a>
+              <a href="myaccount.html">My Account</a>
+            </div>
+          </div>
+          <div class="bg-transfer">
+            <img src="assets/img/footer.jpg" alt="" />
+          </div>
+        </div>
+        <!--end row-two-->
+      </footer>
+      <script>
+        var c = localStorage.getItem("idUser");
+        console.log(c);
+
+        // Post a user
+        var url3 = "http://192.168.37.220:3000/users/" + c;
+        var xhr3 = new XMLHttpRequest();
+        xhr3.open("GET", url3, true);
+
+        xhr3.onload = function () {
+          var admins = JSON.parse(xhr3.responseText);
+          if (xhr3.readyState == 4 && xhr3.status == "200") {
+            document.getElementById("usernameUser").innerHTML =
+              admins.fname + ` ` + admins.lname;
+          } else {
+            console.log("error");
+          }
+        };
+
+        xhr3.send(null);
+      </script>
+      <script>
+        function logout() {
+          var d = window.confirm("want to LogOut?");
+          if (d == true) {
+            localStorage.removeItem("idUser");
+          }
+        }
+      </script>
+    </div>
+    <!--end page-wrapper-->
+    <a href="#page-header" class="to-top scroll" data-show-after-scroll="600"
+      ><i class="arrow_up"></i
+    ></a>
+    <script type="text/javascript" src="assets/js/jquery-2.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://maps.google.com/maps/api/js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/bootstrap/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.validate.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/bootstrap-datepicker.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/icheck.min.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/maps.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+    <!--[if lte IE 9]>
+      <script src="assets/js/ie.js"></script>
+    <![endif]-->
+  </body>
+</html>
